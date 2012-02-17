@@ -1,1 +1,0 @@
-/home/vedatla/.emacs
