@@ -1,43 +1,46 @@
-!------------------------------------------------------------------------------
+1!------------------------------------------------------------------------------
 !
 ! c o l o r -  s e t t i n g s
-
-*background: #000000
-*foreground: #777777
-! Default
-! 0: black
-*color0:  #111111
-*color8:  #686868
-! 1: red
-*color1:  #856363
-*color9:  #ff3964
-! 2: green
-*color2:  #8baa46
-*color10: #beee54
-! 3: yellow
-*color3:  #d9d919
-*color11: #ffff54
-! 4: blue
-*color4:  #186db2
-*color12: #5454ff
-! 5: magenta
-*color5:  #5d478b
-*color13: #9370db
-! 6: cyan
-*color6:  #68838b
-*color14: #50a6c2
-! 7: white
-*color7:  #eeeeee
-*color15: #ffffff
+*background: #001b34
+*foreground: #f8f8f8
+! ANSI colours
+! black
+URxvt.color0:               #073642
+URxvt.color8:               #002636
+! red
+URxvt.color1:               #dc322f
+URxvt.color9:               #856363
+! green
+URxvt.color2:               #92ac68
+URxvt.color10:              #b3ee3a
+! yellow
+URxvt.color3:               #b58900
+URxvt.color11:              #657b83
+! blue
+URxvt.color4:               #268bd2
+URxvt.color12:              #839496
+! magenta
+URxvt.color5:               #d33682
+URxvt.color13:              #fa8072
+! cyan
+URxvt.color6:               #8db6cd
+URxvt.color14:              #bfefff
+! white
+URxvt.color7:               #eee8d5
+URxvt.color15:              #fdf6e3
 !------------------------------------------------------------------------------
 ! u r x v t
-URxvt*font:             xft:montecarlo:size=10
+URxvt*fading:		40
+URxvt*fadeColor:	#0c1021
+URxvt*font:             xft:Inconsolata:size=10
 URxvt*urlLauncher:         iceweasel
 URxvt*scrollBar:        false
 URxvt*scrollBar_right:        true
 URxvt*scrollColor:        #000000
 Xft*dpi : 96
+Xft*autohint: 0
+Xft*lcdfilter:lcddefault
 Xft*antialias: true
-Xft*hintstyle: hintfull
+Xft*hintstyle: hintslight
 Xft*rgba: rgb
 URxvt*border: 0
