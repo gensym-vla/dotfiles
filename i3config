@@ -103,6 +103,7 @@ workspace_layout stacking
 
 #Window specific bindings
 assign [class="Skype"] Skype
+assign [class="Eboard"] FICS
 for_window [title="mutt"] move workspace Mail; workspace Mail
 assign [class="Icedove"] Mail
 for_window [title="ncmpcpp"] move workspace Music; workspace Music
@@ -186,7 +187,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     	position top
-        status_command ~/scripts/i3statusalt
+        status_command ~/scripts/status 0
         colors {
                background #101010
                statusline #528b8b
