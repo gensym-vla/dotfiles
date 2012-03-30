@@ -1,46 +1,46 @@
-1!------------------------------------------------------------------------------
-!
-! c o l o r -  s e t t i n g s
-*background: #001b34
-*foreground: #f8f8f8
-! ANSI colours
-! black
-URxvt.color0:               #073642
-URxvt.color8:               #002636
-! red
-URxvt.color1:               #dc322f
-URxvt.color9:               #856363
-! green
-URxvt.color2:               #92ac68
-URxvt.color10:              #b3ee3a
-! yellow
-URxvt.color3:               #b58900
-URxvt.color11:              #657b83
-! blue
-URxvt.color4:               #268bd2
-URxvt.color12:              #839496
-! magenta
-URxvt.color5:               #d33682
-URxvt.color13:              #fa8072
-! cyan
-URxvt.color6:               #8db6cd
-URxvt.color14:              #bfefff
-! white
-URxvt.color7:               #eee8d5
-URxvt.color15:              #fdf6e3
 !------------------------------------------------------------------------------
 ! u r x v t
-URxvt*fading:		40
-URxvt*fadeColor:	#0c1021
-URxvt*font:             xft:Inconsolata:size=10
-URxvt*urlLauncher:         iceweasel
-URxvt*scrollBar:        false
-URxvt*scrollBar_right:        true
-URxvt*scrollColor:        #000000
-Xft*dpi : 96
-Xft*autohint: 0
-Xft*lcdfilter:lcddefault
-Xft*antialias: true
-Xft*hintstyle: hintslight
-Xft*rgba: rgb
-URxvt*border: 0
+URxvt*fading:		        40
+URxvt*fadeColor:	        #101010
+URxvt*font:                     xft:monofur:size=11
+URxvt*urlLauncher:              iceweasel
+URxvt*scrollBar:                false
+URxvt*scrollBar_right:          true
+URxvt*scrollColor:              #000000
+Xft*autohint: 		        0
+Xft*antialias: 	                1
+Xft*hinting:                    true
+Xft*hintstyle: 		        hintslight
+Xft*lcdfilter:		        lcddefault
+Xft*dpi: 		        96
+Xft*rgba: 		        rgb
+!colors
+*background:            #1f1f1f
+*foreground:            #777777
+
+!black
+URxvt*color8:           #101010
+URxvt*color0:           #262626
+!red
+URxvt*color1:           #cd3333
+URxvt*color9:           #db2929
+!green
+URxvt*color2:           #79973f
+URxvt*color10:          #9acd32
+!yellow
+URxvt*color3:           #dabb60
+URxvt*color11:          #bec04a
+!blue
+*color4:                #268bd2
+*color12:               #388e8e
+!magenta
+*color5:                #d33682
+*color13:               #ba4e6d
+!cyan
+*color6:                #8db6cd
+*color14:               #00ccdd
+
+!white
+URxvt*color7:           #bbbbbb
+URxvt*color15:          #eeeeee
+
