@@ -8,27 +8,29 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
+ipc-socket ~/.i3/i3-ipc.sock
 set $mod Mod4
 
-# font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+
 
 
 # colors
 # class                         border  backgr.	text
 client.focused		        #ee0000	#444444 #9ac0cd
-client.unfocused                #202020 #202020 #204747
+client.unfocused                #202020 #202020 #315858
 client.focused_inactive	        #202020	#202020 #666666
 client.urgent                   #212121 #303030 #ee0000
-client.background               #101010
-font -*-clean-medium-r-*--*-*-*-*-*-*-iso10646-1
+client.background               #262626
+
+
+font -*-terminus-medium-r-*--*-*-*-*-*-*-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 focus_follows_mouse no
 
 # start a terminal
-bindsym $mod+Return exec x-terminal-emulator
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -187,7 +189,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     	position top
-        status_command ~/scripts/status 0
+        status_command i3status -c ~/.i3/i3status.conf
         colors {
                background #101010
                statusline #528b8b
