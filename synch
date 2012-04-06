@@ -1,0 +1,10 @@
+#!/bin/sh
+
+for i in $(ls -a)
+do
+    if [ -f ~/$i ]
+    then
+        echo "Synching $i"
+        cp ../$i . 2> /dev/null
+    fi
+done
