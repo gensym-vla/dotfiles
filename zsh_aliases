@@ -1,0 +1,21 @@
+#!/bin/sh
+#-*- sh -*-
+# start emacs in the console if it is invoked from the console
+alias emacs="emacsclient -t"
+# this is useful while searching for libraries uses
+alias searchlib="find /lib /lib64 '$1' 2> /dev/null"
+# cypress touchpads suck *real* hard
+alias __p="xclip -out"
+#file compressing/decompressing
+alias guntar="tar -xzvf"
+alias untar="tar -xvf"
+alias targ="tar -cvzf"
+alias buntar="tar -jvxf"
+#if i invoke emacs from the terminal, start it in terminal
+alias emacs="emacs -nw"
+#interpreter tricks
+alias poly="rlwrap -pBlue poly"
+alias clisp="rlwrap -pBlue clisp"
+#other stuff
+alias vc="sudo vpnc"
+alias l="ls -lha"
