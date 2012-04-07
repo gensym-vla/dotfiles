@@ -13,9 +13,16 @@ function em {
     fi
 }
 
+function toggle_emd {
+    local EVALEXIT="(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
+    if [ -z "$(emacsclient --eval '(daemonp)' 2>/dev/null)" ]
+    then
+        emacs --daemon
+    else
+        emacsclient --eval "$EVALEXIT"
+    fi
+}
 
-local EVALEXIT="(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
-alias kill_emd="emacsclient --eval \"$EVALEXIT\" "
 # this is useful while searching for libraries uses
 alias searchlib="find /lib /lib64 '$1' 2> /dev/null"
 # cypress touchpads suck *real* hard

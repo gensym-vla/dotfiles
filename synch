@@ -6,5 +6,9 @@ do
     then
         echo "Synching $i"
         cp ../$i . 2> /dev/null
+        echo "Adding $i to git"
+        git add $i
     fi
 done
+git commit -m 'Synched'
+git push -u origin master
