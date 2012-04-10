@@ -63,7 +63,7 @@ function! ToggleBG()
 endfunc
 
 noremap <F3> :call NumbersOff()<cr>
-nnoremap <F2> :call NuTyToggle()<cr>
+noremap <F2> :call NuTyToggle()<cr>
 noremap <F9> :call ToggleBG()<cr>
 noremap <silent><F7> :NERDTreeToggle<cr>
 noremap <silent><F8> :TlistToggle<cr>
