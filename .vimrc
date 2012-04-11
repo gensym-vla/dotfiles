@@ -9,6 +9,7 @@ set shiftwidth=4
 set expandtab
 set smarttab
 set showcmd
+set t_Co=256
 " turn line numbers on
 set number
 set showmatch
