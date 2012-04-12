@@ -1,6 +1,6 @@
 " make backspace more useful
 set backspace=indent,eol,start
-set backup
+set backup       
 set backupdir=~/.vim/backup
 " read changed files automatically
 set autoread
@@ -40,6 +40,7 @@ set laststatus=2
 set statusline=Editing:\ %F\ %m%r%h%w\ %={%{&ff}\|%{strlen(&fenc)?&fenc:'none'}\|%{strlen(&ft)?&ft:'fundamental'}}\ (%l/%L,%v)\ %P
 set scrolloff=10
 set vb t_vb=
+let mapleader="xz"
 call pathogen#infect()
 filetype off
 filetype plugin indent on
