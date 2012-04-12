@@ -44,14 +44,12 @@ call pathogen#infect()
 filetype off
 filetype plugin indent on
 syntax on
-function! NumbersOff()
-    set nonumber
-    set norelativenumber
-endfunc
 function! NuTyToggle()
-    if(&number == 1)
+    if(&number)
         set relativenumber
-    else
+    elseif (&relativenumber)
+        set norelativenumber
+    else 
         set number
     endif
 endfunc
@@ -62,9 +60,8 @@ function! ToggleBG()
         set background=light
     endif
 endfunc
-
-noremap <F3> :call NumbersOff()<cr>
-noremap <F2> :call NuTyToggle()<cr>
+inoremap qq <Esc>
+noremap <silent><F2> :call NuTyToggle()<cr>
 noremap <F9> :call ToggleBG()<cr>
 noremap <silent><F7> :NERDTreeToggle<cr>
 noremap <silent><F8> :TlistToggle<cr>
