@@ -23,11 +23,6 @@ function toggle_emd {
     fi
 }
 
-function lxcomp {
-    echo $1 $2
-    scp $@ $lxmayr:~/bench/
-    ssh -X $lxmayr "cd bench && make ${1%*.cpp} && ./${1%*.cpp} $2"
-}
 # foregrounds vim if it is suspended, calls vim if it isn't
 function vi {
     if [ -z "$(jobs | grep vim 2> /dev/null)" ]
