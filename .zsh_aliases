@@ -4,7 +4,7 @@
 # start emacs from the console
 # if an emacs daemon is running, run emacs as emacsclient
 # this is not really an alias but still useful
-
+lxmayr='alev@lxmayr37.informatik.tu-muenchen.de'
 function em {
     if [ -z "$(emacsclient --eval '(daemonp)' 2>/dev/null)" ]
     then
@@ -23,6 +23,12 @@ function toggle_emd {
         emacsclient --eval "$EVALEXIT"
     fi
 }
+
+function lxcomp {
+    echo $1 $2
+    scp $@ $lxmayr:~/bench/
+    ssh -X $lxmayr "cd bench && make ${1%*.cpp} && ./${1%*.cpp} $2"
+}
 # foregrounds vim if it is suspended, calls vim if it isn't
 function vi {
     if [ -z "$(jobs | grep vim 2> /dev/null)" ]
@@ -32,19 +38,12 @@ function vi {
         fg %vim $@
     fi
 }
+
 # this is useful while searching for libraries uses
 alias searchlib="find /lib /lib64 -name '$1' 2> /dev/null"
 # cypress touchpads suck *real* hard
 alias __p="xclip -out"
 alias vi="vim"
-#file compressing/decompressing
-alias guntar="tar -xzvf"
-alias untar="tar -xvf"
-alias targ="tar -cvzf"
-alias buntar="tar -jvxf"
-#interpreter tricks
-alias poly="rlwrap -pBlue poly"
-alias clisp="rlwrap -pBlue clisp"
 #other stuff
 alias vc="sudo vpnc"
 alias l="ls -lha"

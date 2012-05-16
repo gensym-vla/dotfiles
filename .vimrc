@@ -1,5 +1,5 @@
 " make backspace more useful
-set backspace=indent,eol,start
+set backspace=2
 set backup       
 set backupdir=~/.vim/backup
 " read changed files automatically
@@ -22,6 +22,7 @@ set virtualedit=onemore
 set smartcase
 " turn autoindendation on
 set autoindent
+set pastetoggle=<F11>
 set textwidth=78
 set formatoptions=c,q,r,t
 set ruler
@@ -31,38 +32,41 @@ set hidden
 " hides the cursor while typing
 set mousehide
 " visual settings
-set background=dark
-colorscheme solarized
+set ttyfast
 set shell=/usr/bin/zsh
 set showmode
 set wildmenu
 set laststatus=2
 set statusline=Editing:\ %F\ %m%r%h%w\ %={%{&ff}\|%{strlen(&fenc)?&fenc:'none'}\|%{strlen(&ft)?&ft:'fundamental'}}\ (%l/%L,%v)\ %P
-set scrolloff=10
 set vb t_vb=
-let mapleader="xz"
+set foldmethod=syntax
+set foldnestmax=1
+set nofoldenable
 call pathogen#infect()
 filetype off
 filetype plugin indent on
 syntax on
+set background=dark
+colorscheme zenburn
 function! NuTyToggle()
-    if(&number)
-        set relativenumber
-    elseif (&relativenumber)
+if(&number)
+    set relativenumber
+elseif (&relativenumber)
         set norelativenumber
     else 
         set number
     endif
 endfunc
-function! ToggleBG()
-    if(&background == "light")
-        set background=dark
-    else
-        set background=light
-    endif
-endfunc
-inoremap qq <Esc>
-noremap <silent><F2> :call NuTyToggle()<cr>
-noremap <F9> :call ToggleBG()<cr>
-noremap <silent><F7> :NERDTreeToggle<cr>
-noremap <silent><F8> :TlistToggle<cr>
+let mapleader=","
+nnoremap j gj
+nnoremap k gk
+inoremap jj <Esc><cr>
+nnoremap <silent><F12> :noh <cr>
+nnoremap <silent><F2> :call NuTyToggle()<cr>
+nnoremap <silent><F7> :NERDTreeToggle<cr>
+nnoremap <silent><F8> :TlistToggle<cr>
+nnoremap <silent><F9> :SyntasticToggleMode<cr>
+nnoremap <silent><C-h>  :foldclose <cr>
+noremap  <silent><C-Left>  :bprevious <cr>
+noremap  <silent><C-Right> :bnext <cr>
+nnoremap <silent><F6> :set foldenable! <cr>
