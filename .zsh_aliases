@@ -4,7 +4,6 @@
 # start emacs from the console
 # if an emacs daemon is running, run emacs as emacsclient
 # this is not really an alias but still useful
-lxmayr='alev@lxmayr37.informatik.tu-muenchen.de'
 function em {
     if [ -z "$(emacsclient --eval '(daemonp)' 2>/dev/null)" ]
     then
